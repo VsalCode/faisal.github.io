@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>faisal.github.io</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="responsive.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet" />
@@ -12,11 +13,17 @@
   </head>
   <body>
     <div class="container">
-      <nav>
+      <nav class="navbar-web">
         <a href="#home">home</a>
         <a href="#about">about</a>
         <a href="#porto">portofolio</a>
-        <a href="">contact</a>
+        <a href="#footer">contact</a>
+      </nav>
+      <nav class="navbar-mobile">
+        <a href="#home"><span class="material-symbols-outlined"> home </span></a>
+        <a href="#about"><span class="material-symbols-outlined"> account_circle </span></a>
+        <a href="#porto"><span class="material-symbols-outlined"> folder_open </span></a>
+        <a href="#footer"><span class="material-symbols-outlined"> perm_phone_msg </span></a>
       </nav>
       <div id="home" class="home">
         <div>
@@ -79,7 +86,7 @@
             <div>
               <p>Logo Design</p>
               <p>Indonesia Persada ID</p>
-              <img src="./src/imageS/tttt.jpg" alt="" />
+              <img src="./src/images/tttt.jpg" alt="" />
             </div>
           </div>
           <p>and more ...</p>
@@ -116,23 +123,10 @@
           <p>and more ...</p>
         </div>
       </div>
-      <div class="footer">
+      <div id="footer" class="footer">
         <p>THANK YOU</p>
-        <div>
-          <div>
-            <span class="material-symbols-outlined">mail</span>
-            <p>muhamadfaisall@gmail.com</p>
-          </div>
-          <div>
-            <span class="material-symbols-outlined"> call </span>
-            <p>+62 813 9909 0477</p>
-          </div>
-        </div>
+        <div></div>
       </div>
     </div>
   </body>
 </html>
-
-<!-- <p>I’m a passionate on website developer, exploring the intersection between fullstack web and graphic design. Through this platform, I share my works, ideas, and projects that reflect who I am and what I do.</p> -->
-<!-- <button>Let’s connect</button> -->
-<!-- <a   href="#about"><span>see more</span> <span class="material-symbols-outlined"> arrow_downward </span></a> -->

@@ -11,7 +11,7 @@
   background: #0039c8;
 }
 
-nav {
+.navbar-web {
   background: #adff00;
   border-radius: 16px;
   display: flex;
@@ -27,7 +27,7 @@ nav {
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.41);
 }
 
-nav > a {
+.navbar-web > a {
   color: #000c0d;
   font-family: Montserrat, Helvetica, sans-serif;
   text-decoration: none;
@@ -35,7 +35,7 @@ nav > a {
   font-size: 18px;
 }
 
-nav > a:hover {
+.navbar-web > a:hover {
   color: #181c14;
   font-weight: 600;
   text-decoration: underline;
@@ -316,4 +316,220 @@ nav > a:hover {
 .footer > div > div > span {
   font-size: 30px;
   color: white;
+}
+
+/* RESPONSIVE CSS FOR PORTFOLIO WEBSITE */
+
+/* Basic responsive setup */
+@media screen and (max-width: 1200px) {
+  .navbar-web {
+    margin: 0 100px;
+  }
+  
+  .portoweb-grid > a > img {
+    width: 350px;
+  }
+}
+
+/* Tablet view */
+@media screen and (max-width: 992px) {
+  .navbar-web {
+    margin: 0 50px;
+  }
+  
+  .home > div:nth-child(1) > p {
+    font-size: 40px;
+  }
+  
+  .home > div:nth-child(2) > img {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .ido-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .porto-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .portoweb-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .portoweb-grid > a > img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .about > div:nth-child(1) > p:nth-child(2) {
+    padding: 20px 30px;
+  }
+}
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+  /* Hide web navbar and show mobile navbar */
+  .navbar-web {
+    display: none;
+  }
+  
+  .navbar-mobile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #adff00;
+    height: 60px;
+    border-radius: 50px;
+    margin: 0 20px;
+    position: sticky;
+    top: 15px;
+    z-index: 50;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.41);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.41);
+  }
+  
+  .navbar-mobile > a {
+    color: #000c0d;
+    text-decoration: none;
+  }
+  
+  .navbar-mobile > a:hover {
+    color: #181c14;
+  }
+  
+  /* Home section adjustments */
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .home > div:nth-child(1) > p {
+    font-size: 30px;
+  }
+  
+  .home > div:nth-child(2) > img {
+    width: 250px;
+    height: 250px;
+    margin-top: -30px;
+  }
+  
+  /* About section */
+  .about {
+    height: auto;
+    padding: 40px 20px;
+  }
+  
+  .about > div:nth-child(1) > p:nth-child(1),
+  .about > div:nth-child(2) > p:nth-child(1) {
+    font-size: 28px;
+  }
+  
+  .about > div:nth-child(1) > p:nth-child(2) {
+    font-size: 16px;
+    padding: 20px 10px;
+  }
+  
+  /* What I do grid */
+  .ido-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  /* Portfolio section */
+  .porto {
+    height: auto;
+  }
+  
+  .porto > div > p:nth-child(1) {
+    font-size: 28px;
+    padding: 50px 0 30px;
+  }
+  
+  .porto > div > marquee {
+    height: 70px;
+    font-size: 24px;
+  }
+  
+  .porto-grid {
+    grid-template-columns: 1fr;
+    white-space: normal;
+  }
+  
+  .portoweb-grid {
+    grid-template-columns: 1fr;
+    white-space: normal;
+  }
+  
+  .portoweb-grid > a > p:nth-child(1) {
+    margin-bottom: 15px;
+  }
+  
+  /* Footer */
+  .footer {
+    height: auto;
+    padding: 40px 20px;
+    border: 30px solid white;
+  }
+  
+  .footer > p {
+    font-size: 28px;
+  }
+  
+  .footer > div {
+    flex-direction: column;
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .home > div:nth-child(1) > p {
+    font-size: 24px;
+  }
+  
+  .home > div:nth-child(2) > img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .about > div:nth-child(1) > p:nth-child(1),
+  .about > div:nth-child(2) > p:nth-child(1) {
+    font-size: 24px;
+  }
+  
+  .porto > div > p:nth-child(1) {
+    font-size: 24px;
+  }
+  
+  .footer {
+    border: 20px solid white;
+  }
+  
+  .footer > div > div > p {
+    font-size: 16px;
+  }
+}
+
+/* Fix for navbar-mobile display */
+.navbar-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-mobile {
+    display: flex;
+  }
+}
+
+/* Height adjustments for smaller screens */
+@media screen and (max-height: 700px) {
+  .container {
+    height: auto;
+  }
+  
+  .about {
+    height: auto;
+  }
 }
