@@ -8,11 +8,11 @@
   height: 500svh;
   background-repeat: no-repeat;
   background-size: cover;
-  background: #0039C8;
+  background: #0039c8;
 }
 
 nav {
-  background: #ADFF00;
+  background: #adff00;
   border-radius: 16px;
   display: flex;
   justify-content: space-around;
@@ -22,13 +22,13 @@ nav {
   border-radius: 50px;
   position: sticky;
   top: 15px;
-  z-index: 10;
+  z-index: 50;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.41);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.41);
 }
 
 nav > a {
-  color: #000C0D;
+  color: #000c0d;
   font-family: Montserrat, Helvetica, sans-serif;
   text-decoration: none;
   font-weight: 700;
@@ -58,31 +58,8 @@ nav > a:hover {
 }
 
 .home > div:nth-child(1) > p > span {
-  color: #ADFF00;
+  color: #adff00;
 }
-/* 
-.home > div:nth-child(1) > button {
-  width: 300px;
-  height: 50px;
-  border-radius: 30px;
-  background-color: #205781;
-  color: white;
-  border: none;
-  text-align: center;
-  margin-top: 50px;
-  font-size: 20px;
-  font-weight: 600;
-  cursor: pointer;
-  position: absolute;
-  bottom: 0;
-  right: 10;
-  left: 10;
-  z-index: 30;
-}
-
-.home > div:nth-child(1) > button:hover {
-  opacity: 50%;
-} */
 
 .home > div:nth-child(1) > a {
   color: #262626;
@@ -109,8 +86,9 @@ nav > a:hover {
 /* ABOUT */
 
 .about {
+  position: relative;
   height: 90vh;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   border-radius: 70px;
   z-index: 20;
   padding: 50px 30px;
@@ -124,7 +102,7 @@ nav > a:hover {
   text-align: center;
   font-size: 36px;
   font-weight: 500;
-  color: #060606  ;
+  color: #060606;
   font-family: "Special Gothic Expanded One", Helvetica, sans-serif;
 }
 
@@ -140,7 +118,7 @@ nav > a:hover {
   font-size: 36px;
   padding-top: 50px;
   font-weight: 500;
-  color: #060606  ;
+  color: #060606;
   font-family: "Special Gothic Expanded One", Helvetica, sans-serif;
 }
 
@@ -157,7 +135,7 @@ nav > a:hover {
   padding: 20px 40px;
   color: white;
   border-radius: 20px;
-  background-color: #0039C8;
+  background-color: #0039c8;
   align-content: center;
   display: flex;
   justify-content: center;
@@ -169,17 +147,18 @@ nav > a:hover {
   transition: all;
 }
 
-.ido-grid > div:hover{
+.ido-grid > div:hover {
   transform: translateY(-15px);
-  background-color: #ADFF00;
-  color: #000C0D;
+  background-color: #adff00;
+  color: #000c0d;
 }
 
 /* PORTO */
 .porto {
-  height: 300vh;
+  height: 250vh;
   background-color: #060606;
   margin-top: -60px;
+  padding-top: 70px;
   z-index: 3;
 }
 
@@ -188,7 +167,7 @@ nav > a:hover {
   font-size: 36px;
   font-weight: 500;
   color: white;
-  font-family: "Special Gothic Expanded One", Helvetica, sans-serif; 
+  font-family: "Special Gothic Expanded One", Helvetica, sans-serif;
   padding: 70px 0 50px;
 }
 
@@ -197,18 +176,18 @@ nav > a:hover {
   font-size: 26px;
   font-weight: 500;
   color: white;
-  font-family: Montserrat, Helvetica, sans-serif; 
+  font-family: Montserrat, Helvetica, sans-serif;
   padding: 70px 0 50px;
 }
 
 .porto > div > marquee {
-  background-color: #ADFF00;
+  background-color: #adff00;
   display: flex;
   align-items: center;
   height: 100px;
   width: 100%;
   font-size: 35px;
-  font-family: "Special Gothic Expanded One", Helvetica, sans-serif; 
+  font-family: "Special Gothic Expanded One", Helvetica, sans-serif;
 }
 
 /* PORTO GRID */
@@ -220,8 +199,8 @@ nav > a:hover {
 }
 
 .porto-grid > div > p:nth-child(1) {
-  font-family: Montserrat, Helvetica, sans-serif; 
-  color: #F4F4F4;
+  color: #f4f4f4;
+  font-family: Montserrat, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 500;
   text-align: center;
@@ -229,8 +208,8 @@ nav > a:hover {
 }
 
 .porto-grid > div > p:nth-child(2) {
-  font-family: Montserrat, Helvetica, sans-serif; 
-  color: #ADFF00;
+  font-family: Montserrat, Helvetica, sans-serif;
+  color: #adff00;
   font-size: 16px;
   font-style: italic;
   font-weight: 500;
@@ -245,6 +224,51 @@ nav > a:hover {
   transition: all;
 }
 
-.porto-grid > div:hover {
-  transform: translateY(-30px);
+.porto > div:nth-child(3) > p {
+  color: black;
 }
+.porto-grid > div:hover {
+transform: translateY(-30px);
+}
+
+/* PORTO WEB */
+
+.porto > div:nth-child(3) > p{
+  color: #adff00;
+}
+
+.portoweb-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;  
+}
+
+.portoweb-grid > a {
+  text-decoration: none;
+}
+
+.portoweb-grid > a > p:nth-child(1) {
+  color: white;
+  font-family: Montserrat, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.portoweb-grid > a > p:nth-child(3) {
+  font-style: italic;
+  color: white;
+  font-family: Montserrat, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.portoweb-grid > a > img {
+  height: 200px;
+  width: 420px;
+  border-radius: 5px;
+}
+
