@@ -6,7 +6,14 @@ In this project, I created my personal landing page using HTML and CSS. I implem
 
 ## Preview
 
-![navbar](./src/images/preview.png)
+#### Dekstop
+![preview](./src/images/preview.png)
+
+#### Mobile
+![preview](./src/images/preview-mobile.png)
+
+
+url: ```https://vsalcode.github.io/```
 
 ## How To Run This Project
 
