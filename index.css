@@ -5,24 +5,25 @@
 }
 
 .container {
-  height: 500svh;
+  height: 400svh;
   background-repeat: no-repeat;
   background-size: cover;
   background: #0039c8;
 }
 
 .navbar-web {
-  background: #adff00;
-  border-radius: 16px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background: #adff00;
   height: 60px;
-  margin: 0 200px;
   border-radius: 50px;
+  margin: 0 20px;
   position: sticky;
   top: 15px;
   z-index: 50;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.41);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.41);
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.41);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.41);
 }
@@ -116,7 +117,7 @@
 .about > div:nth-child(2) > p:nth-child(1) {
   text-align: center;
   font-size: 36px;
-  padding-top: 50px;
+  padding-top: 20px;
   font-weight: 500;
   color: #060606;
   font-family: "Special Gothic Expanded One", Helvetica, sans-serif;
@@ -125,14 +126,15 @@
 /* WHAT I DO */
 
 .ido-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding-top: 25px;
 }
 
 .ido-grid > div {
-  padding: 20px 40px;
+  padding: 15px 20px;
   color: white;
   border-radius: 20px;
   background-color: #0039c8;
@@ -147,10 +149,13 @@
   transition: all;
 }
 
-.ido-grid > div:hover {
-  transform: translateY(-15px);
-  background-color: #adff00;
-  color: #000c0d;
+.ido-grid > div > p {
+  font-size: 15px;
+}
+
+.ido-grid > div > img {
+  width: 20px;
+  height: 20px;
 }
 
 /* PORTO */
@@ -166,7 +171,7 @@
   text-align: center;
   font-size: 36px;
   font-weight: 500;
-  color: white;
+  color: #adff00;
   font-family: "Special Gothic Expanded One", Helvetica, sans-serif;
   padding: 70px 0 50px;
 }
@@ -222,8 +227,8 @@
 }
 
 .porto-grid > div > img {
-  height: 280px;
-  width: 280px;
+  height: 230px;
+  width: 230px;
   border-radius: 30px;
   transition: all;
 }
@@ -234,7 +239,7 @@
 
 /* PORTO WEB */
 
-.porto > div:nth-child(3) > p{
+.porto > div:nth-child(3) > p {
   color: #adff00;
 }
 
@@ -244,7 +249,7 @@
   white-space: nowrap;
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
-  gap: 30px;  
+  gap: 30px;
   padding: 30px;
 }
 
@@ -279,7 +284,7 @@
 
 /* FOOTER */
 
-.footer{
+.footer {
   background-color: #0039c8;
   border-top-right-radius: 70px;
   border-top-left-radius: 70px;
@@ -301,7 +306,8 @@
   padding: 0 0 20px;
 }
 
-.footer > div,  .footer > div > div {
+.footer > div,
+.footer > div > div {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -313,75 +319,66 @@
   font-family: Montserrat, Helvetica, sans-serif;
 }
 
-.footer > div > div > span {
-  font-size: 30px;
+.footer > div > span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-family: Montserrat, Helvetica, sans-serif;
+  font-size: 20px;
   color: white;
 }
 
-/* RESPONSIVE CSS FOR PORTFOLIO WEBSITE */
+/* ------------------------------------------------------------ 
+RESPONSIVE CSS FOR PORTFOLIO WEBSITE 
+------------------------------------------------------------ */
 
-/* Basic responsive setup */
-@media screen and (max-width: 1200px) {
-  .navbar-web {
-    margin: 0 100px;
-  }
-  
-  .portoweb-grid > a > img {
-    width: 350px;
-  }
-}
-
-/* Tablet view */
-@media screen and (max-width: 992px) {
-  .navbar-web {
-    margin: 0 50px;
-  }
-  
-  .home > div:nth-child(1) > p {
-    font-size: 40px;
-  }
-  
-  .home > div:nth-child(2) > img {
-    width: 300px;
-    height: 300px;
-  }
-  
+/* WHAT I DO */
+@media (max-width: 606px) {
   .ido-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  
-  .porto-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .portoweb-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .portoweb-grid > a > img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .about > div:nth-child(1) > p:nth-child(2) {
-    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
-/* Mobile view */
-@media screen and (max-width: 768px) {
-  /* Hide web navbar and show mobile navbar */
+@media (max-width: 475px) {
+
+  .porto > div > p:nth-child(1) {
+    font-size: 23px;
+    padding: 50px 0 30px;
+  }
+
+  .porto > div > p:last-child {
+    font-size: 20px;
+  }
+  
+  .portoweb-grid > a > img {
+    height: 150px;
+    width: 300px;
+    border-radius: 5px; 
+  }
+
+  .portoweb-grid > a > p {
+    font-size: 16px;
+  }
+
+  .portoweb-grid > a > p:nth-child(3) {
+    font-size: 10px;
+  }
+}
+
+/* NAVBAR */
+@media (max-width: 590px){
   .navbar-web {
     display: none;
   }
-  
+
   .navbar-mobile {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background: #adff00;
-    height: 60px;
+    height: 45px;
     border-radius: 50px;
     margin: 0 20px;
     position: sticky;
@@ -390,97 +387,105 @@
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.41);
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.41);
   }
-  
+
   .navbar-mobile > a {
     color: #000c0d;
     text-decoration: none;
   }
-  
+
   .navbar-mobile > a:hover {
     color: #181c14;
   }
-  
-  /* Home section adjustments */
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
   .home {
     display: flex;
     flex-direction: column;
   }
-  
+
   .home > div:nth-child(1) > p {
     font-size: 30px;
   }
-  
+
   .home > div:nth-child(2) > img {
     width: 250px;
     height: 250px;
     margin-top: -30px;
   }
-  
+
   /* About section */
   .about {
     height: auto;
     padding: 40px 20px;
   }
-  
+
   .about > div:nth-child(1) > p:nth-child(1),
   .about > div:nth-child(2) > p:nth-child(1) {
     font-size: 28px;
   }
-  
+
   .about > div:nth-child(1) > p:nth-child(2) {
     font-size: 16px;
     padding: 20px 10px;
   }
-  
+
   /* What I do grid */
   .ido-grid {
     grid-template-columns: 1fr;
     gap: 15px;
+    padding-right: 0;
+    width: 100%;
   }
-  
+
+  .ido-grid > div {
+    width: 100%;
+  }
+
+  .ido-grid > div > p {
+    font-size: 14px;
+  }
+
   /* Portfolio section */
   .porto {
-    height: auto;
+    height: 280svh;
   }
-  
+
   .porto > div > p:nth-child(1) {
     font-size: 28px;
     padding: 50px 0 30px;
   }
-  
-  .porto > div > marquee {
-    height: 70px;
-    font-size: 24px;
+
+  .porto > div > p:last-child {
+    font-size: 20px;
   }
   
-  .porto-grid {
-    grid-template-columns: 1fr;
-    white-space: normal;
-  }
-  
-  .portoweb-grid {
-    grid-template-columns: 1fr;
-    white-space: normal;
-  }
-  
-  .portoweb-grid > a > p:nth-child(1) {
-    margin-bottom: 15px;
-  }
-  
-  /* Footer */
+  /* Footer Responsive */
   .footer {
     height: auto;
     padding: 40px 20px;
     border: 30px solid white;
   }
-  
+
   .footer > p {
     font-size: 28px;
   }
-  
+
   .footer > div {
     flex-direction: column;
   }
+
+  .footer > div > span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-size: 13px;
+    color: white;
+  }
+  
 }
 
 /* Small mobile devices */
@@ -488,48 +493,72 @@
   .home > div:nth-child(1) > p {
     font-size: 24px;
   }
-  
+
   .home > div:nth-child(2) > img {
     width: 200px;
     height: 200px;
   }
-  
+
   .about > div:nth-child(1) > p:nth-child(1),
   .about > div:nth-child(2) > p:nth-child(1) {
-    font-size: 24px;
+    font-size: 20px;
   }
-  
+
   .porto > div > p:nth-child(1) {
     font-size: 24px;
   }
-  
+
   .footer {
     border: 20px solid white;
   }
-  
+
   .footer > div > div > p {
     font-size: 16px;
   }
 }
 
 /* Fix for navbar-mobile display */
-.navbar-mobile {
+/* .navbar-mobile {
   display: none;
-}
+} */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 766px) {
   .navbar-mobile {
     display: flex;
   }
-}
 
-/* Height adjustments for smaller screens */
-@media screen and (max-height: 700px) {
-  .container {
-    height: auto;
+  .footer {
+    background-color: #0039c8;
+    border-top-right-radius: 70px;
+    border-top-left-radius: 70px;
+    border: 20px solid white;
+    height: 50vh;
+    margin-top: -150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  
-  .about {
-    height: auto;
+
+  .footer > p {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    color: #adff00;
+    font-family: "Special Gothic Expanded One", Helvetica, sans-serif;
+    padding: 0 0 20px;
+  }
+
+  .footer > div,
+  .footer > div > div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .footer > div > div > p {
+    font-size: 15px;
+    color: white;
+    font-family: Montserrat, Helvetica, sans-serif;
   }
 }
